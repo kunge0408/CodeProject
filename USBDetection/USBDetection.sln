@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "USBDetection", "USBDetection.vcproj", "{012E5B2C-1FF4-42DE-9C3A-8FBD19305643}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{012E5B2C-1FF4-42DE-9C3A-8FBD19305643}.Debug|Win32.ActiveCfg = Debug|Win32
+		{012E5B2C-1FF4-42DE-9C3A-8FBD19305643}.Debug|Win32.Build.0 = Debug|Win32
+		{012E5B2C-1FF4-42DE-9C3A-8FBD19305643}.Release|Win32.ActiveCfg = Release|Win32
+		{012E5B2C-1FF4-42DE-9C3A-8FBD19305643}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
