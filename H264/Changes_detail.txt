@@ -1,0 +1,30 @@
+Changes for JM 6.2
+------------------
+
+The decoder should be nearly in JVT-G50 (final draft) state. 
+
+Known problems:
+  - the old Parameter Set syntax is used by default. Enable
+    #define G50_SPS
+    in defines.h for the new syntax
+  - the transform/inverse transform has not been reversed
+  - the direct modes seem to have some mismatches (compared with the
+    HHI implementation) for MB AFF (Alexis Tourapis is working on that)
+  - PCM macroblock mode not supported
+  - deblocking filter is not aligned to the text
+  - reference picture reordering / mmco hasn't got much testing
+
+The encoder in this version is completely broken. I started merging some
+code from the decoder, but currently don't have the time to finish that.
+
+If you're interested in encoder work, please contact me.
+
+Karsten
+Changes for JM 7.1 encoder
+--------------------------
+Known problems:
+   - Decoder sometimes can't decode the bitstream with CABAC on, 
+     multiple reference and B slice coding option.
+   - constrained intra prediction
+
+Siwei
