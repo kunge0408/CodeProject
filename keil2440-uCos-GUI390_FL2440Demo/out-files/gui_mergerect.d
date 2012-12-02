@@ -1,0 +1,9 @@
+.\out-files\gui_mergerect.o: GUI\core\GUI_MergeRect.c
+.\out-files\gui_mergerect.o: GUI\core\GUI.h
+.\out-files\gui_mergerect.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\gui_mergerect.o: .\Config\GUIConf.h
+.\out-files\gui_mergerect.o: GUI\core\GUIType.h
+.\out-files\gui_mergerect.o: GUI\core\LCD.h
+.\out-files\gui_mergerect.o: GUI\core\GUIVersion.h
+.\out-files\gui_mergerect.o: GUI\core\GUIDebug.h
+.\out-files\gui_mergerect.o: GUI\core\GUI_X.h

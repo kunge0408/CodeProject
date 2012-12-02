@@ -1,0 +1,10 @@
+.\out-files\guidemo_polygon.o: GUIDemo\GUIDEMO_Polygon.c
+.\out-files\guidemo_polygon.o: .\GUI\core\GUI.h
+.\out-files\guidemo_polygon.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guidemo_polygon.o: .\Config\GUIConf.h
+.\out-files\guidemo_polygon.o: .\GUI\core\GUIType.h
+.\out-files\guidemo_polygon.o: .\GUI\core\LCD.h
+.\out-files\guidemo_polygon.o: .\GUI\core\GUIVersion.h
+.\out-files\guidemo_polygon.o: GUIDemo\GUIDEMO.h
+.\out-files\guidemo_polygon.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\guidemo_polygon.o: .\Config\LCDConf.h

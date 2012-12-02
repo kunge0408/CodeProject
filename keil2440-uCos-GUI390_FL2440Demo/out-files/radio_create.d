@@ -1,0 +1,9 @@
+.\out-files\radio_create.o: GUI\Widget\RADIO_Create.c
+.\out-files\radio_create.o: GUI\Widget\RADIO.h
+.\out-files\radio_create.o: .\GUI\WM\WM.h
+.\out-files\radio_create.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\radio_create.o: .\Config\GUIConf.h
+.\out-files\radio_create.o: .\GUI\core\GUIType.h
+.\out-files\radio_create.o: .\GUI\core\LCD.h
+.\out-files\radio_create.o: .\GUI\WM\WM_GUI.h
+.\out-files\radio_create.o: GUI\Widget\DIALOG_Intern.h

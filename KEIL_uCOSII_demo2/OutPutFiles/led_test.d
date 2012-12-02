@@ -1,0 +1,11 @@
+.\OutPutFiles\led_test.o: Drivers\LED_test\LED_test_SRC\LED_test.c
+.\OutPutFiles\led_test.o: .\App_Main\App_INC\includes.h
+.\OutPutFiles\led_test.o: .\CommonFiles\uCOS-II\uCOS-II_BSP\os_cpu.h
+.\OutPutFiles\led_test.o: .\CommonFiles\uCOS-II\uCOS-II_BSP\os_cfg.h
+.\OutPutFiles\led_test.o: .\CommonFiles\uCOS-II\uCoS-II_SRC\ucos_ii.h
+.\OutPutFiles\led_test.o: .\App_Main\App_INC\app_cfg.h
+.\OutPutFiles\led_test.o: .\CommonFiles\FL2440_BSP\2440BSP_INC\2440addr.h
+.\OutPutFiles\led_test.o: .\CommonFiles\FL2440_BSP\2440BSP_INC\option.h
+.\OutPutFiles\led_test.o: .\CommonFiles\FL2440_BSP\2440BSP_INC\def.h
+.\OutPutFiles\led_test.o: .\CommonFiles\uCOS-II\uCOS-II_BSP\os_timer4_c.h
+.\OutPutFiles\led_test.o: .\Drivers\LED_test\LED_test_INC\LED_test.h

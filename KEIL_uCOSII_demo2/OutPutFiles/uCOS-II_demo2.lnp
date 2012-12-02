@@ -1,0 +1,4 @@
+--cpu ARM920T ".\outputfiles\2440_init.o" ".\outputfiles\os_cpu_c.o" ".\outputfiles\os_cpu_a.o" ".\outputfiles\os_timer4_c.o" ".\outputfiles\os_flag.o" ".\outputfiles\os_mbox.o" ".\outputfiles\os_mem.o" ".\outputfiles\os_mutex.o" ".\outputfiles\os_q.o" ".\outputfiles\os_sem.o" ".\outputfiles\os_task.o" ".\outputfiles\os_time.o" ".\outputfiles\os_tmr.o" ".\outputfiles\os_core.o" ".\outputfiles\app_main.o" ".\outputfiles\led_test.o" --strict --scatter ".\ScatterFlies\uCOS-II_demo.sct" 
+--entry __ENTRY --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\uCOS-II_demo2.map" -o ".\OutPutFiles\uCOS-II_demo2.axf"

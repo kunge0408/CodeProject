@@ -1,0 +1,11 @@
+.\out-files\header_createindirect.o: GUI\Widget\HEADER_CreateIndirect.c
+.\out-files\header_createindirect.o: GUI\Widget\HEADER.h
+.\out-files\header_createindirect.o: .\GUI\core\GUI.h
+.\out-files\header_createindirect.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\header_createindirect.o: .\Config\GUIConf.h
+.\out-files\header_createindirect.o: .\GUI\core\GUIType.h
+.\out-files\header_createindirect.o: .\GUI\core\LCD.h
+.\out-files\header_createindirect.o: .\GUI\core\GUIVersion.h
+.\out-files\header_createindirect.o: .\GUI\WM\WM.h
+.\out-files\header_createindirect.o: .\GUI\WM\WM_GUI.h
+.\out-files\header_createindirect.o: GUI\Widget\DIALOG_Intern.h

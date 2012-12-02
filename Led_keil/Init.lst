@@ -1,0 +1,48 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 PRESERVE8
+    2 00000000                 AREA             RESET,CODE,READONLY
+    3 00000000                 ENTRY
+    4 00000000 E59FD000        ldr              r13, =0x1000
+    5 00000004                 IMPORT           ledMain
+    6 00000004 EAFFFFFE        b                ledMain
+    7 00000008                 END
+              00001000 
+Command Line: --debug --xref --cpu=ARM920T --apcs=interwork --depend=Init.d -oI
+nit.o -IE:\Keil\ARM\CMSIS\Include -IE:\Keil\ARM\INC\Samsung --list=Init.lst Ini
+t.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 2 in file Init.s
+   Uses
+      None
+Comment: RESET unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+ledMain 00000000
+
+Symbol: ledMain
+   Definitions
+      At line 5 in file Init.s
+   Uses
+      At line 6 in file Init.s
+Comment: ledMain used once
+1 symbol
+327 symbols in table

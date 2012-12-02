@@ -1,0 +1,17 @@
+.\out-files\lcd_mixcolors256.o: GUI\core\LCD_MixColors256.c
+.\out-files\lcd_mixcolors256.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\lcd_mixcolors256.o: GUI\core\LCD.h
+.\out-files\lcd_mixcolors256.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\lcd_mixcolors256.o: .\Config\GUIConf.h
+.\out-files\lcd_mixcolors256.o: GUI\core\GUI_Private.h
+.\out-files\lcd_mixcolors256.o: GUI\core\GUI_Protected.h
+.\out-files\lcd_mixcolors256.o: GUI\core\GUI.h
+.\out-files\lcd_mixcolors256.o: GUI\core\GUIType.h
+.\out-files\lcd_mixcolors256.o: GUI\core\GUIVersion.h
+.\out-files\lcd_mixcolors256.o: GUI\core\LCD_Protected.h
+.\out-files\lcd_mixcolors256.o: GUI\core\GUIDebug.h
+.\out-files\lcd_mixcolors256.o: GUI\core\GUI_X.h
+.\out-files\lcd_mixcolors256.o: .\GUI\WM\WM_GUI.h
+.\out-files\lcd_mixcolors256.o: GUI\core\LCD_Private.h
+.\out-files\lcd_mixcolors256.o: GUI\core\LCD_ConfDefaults.h
+.\out-files\lcd_mixcolors256.o: .\Config\LCDConf.h

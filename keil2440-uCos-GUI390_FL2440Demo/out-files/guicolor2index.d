@@ -1,0 +1,12 @@
+.\out-files\guicolor2index.o: GUI\core\GUIColor2Index.c
+.\out-files\guicolor2index.o: GUI\core\GUI_Protected.h
+.\out-files\guicolor2index.o: GUI\core\GUI.h
+.\out-files\guicolor2index.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\guicolor2index.o: .\Config\GUIConf.h
+.\out-files\guicolor2index.o: GUI\core\GUIType.h
+.\out-files\guicolor2index.o: GUI\core\LCD.h
+.\out-files\guicolor2index.o: GUI\core\GUIVersion.h
+.\out-files\guicolor2index.o: GUI\core\LCD_Protected.h
+.\out-files\guicolor2index.o: GUI\core\GUIDebug.h
+.\out-files\guicolor2index.o: GUI\core\GUI_X.h
+.\out-files\guicolor2index.o: .\GUI\WM\WM_GUI.h

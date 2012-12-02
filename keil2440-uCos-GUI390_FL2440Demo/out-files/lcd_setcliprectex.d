@@ -1,0 +1,16 @@
+.\out-files\lcd_setcliprectex.o: GUI\core\LCD_SetClipRectEx.c
+.\out-files\lcd_setcliprectex.o: GUI\core\LCD_Private.h
+.\out-files\lcd_setcliprectex.o: GUI\core\LCD_ConfDefaults.h
+.\out-files\lcd_setcliprectex.o: .\Config\LCDConf.h
+.\out-files\lcd_setcliprectex.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\lcd_setcliprectex.o: .\Config\GUIConf.h
+.\out-files\lcd_setcliprectex.o: GUI\core\LCD_Protected.h
+.\out-files\lcd_setcliprectex.o: GUI\core\LCD.h
+.\out-files\lcd_setcliprectex.o: GUI\core\GUI.h
+.\out-files\lcd_setcliprectex.o: GUI\core\GUIType.h
+.\out-files\lcd_setcliprectex.o: GUI\core\GUIVersion.h
+.\out-files\lcd_setcliprectex.o: GUI\core\GUI_Private.h
+.\out-files\lcd_setcliprectex.o: GUI\core\GUI_Protected.h
+.\out-files\lcd_setcliprectex.o: GUI\core\GUIDebug.h
+.\out-files\lcd_setcliprectex.o: GUI\core\GUI_X.h
+.\out-files\lcd_setcliprectex.o: .\GUI\WM\WM_GUI.h

@@ -1,0 +1,17 @@
+.\out-files\lcdrle4.o: GUI\core\LCDRLE4.c
+.\out-files\lcdrle4.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\lcdrle4.o: GUI\core\LCD.h
+.\out-files\lcdrle4.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\lcdrle4.o: .\Config\GUIConf.h
+.\out-files\lcdrle4.o: GUI\core\GUI_Private.h
+.\out-files\lcdrle4.o: GUI\core\GUI_Protected.h
+.\out-files\lcdrle4.o: GUI\core\GUI.h
+.\out-files\lcdrle4.o: GUI\core\GUIType.h
+.\out-files\lcdrle4.o: GUI\core\GUIVersion.h
+.\out-files\lcdrle4.o: GUI\core\LCD_Protected.h
+.\out-files\lcdrle4.o: GUI\core\GUIDebug.h
+.\out-files\lcdrle4.o: GUI\core\GUI_X.h
+.\out-files\lcdrle4.o: .\GUI\WM\WM_GUI.h
+.\out-files\lcdrle4.o: GUI\core\LCD_Private.h
+.\out-files\lcdrle4.o: GUI\core\LCD_ConfDefaults.h
+.\out-files\lcdrle4.o: .\Config\LCDConf.h

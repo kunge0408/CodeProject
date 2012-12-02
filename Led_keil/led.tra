@@ -1,0 +1,24 @@
+*** Creating Trace Output File 'led.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"led.o"'
+### List of Objects: adding '"init.o"'
+### List of Objects: adding '"lcd.o"'
+### List of Objects: adding '"uart.o"'
+### List of Objects: adding '"xyx_320_240.o"'
+### List of Objects: adding '"bmp.o"'
+### ADS-LD Command completed:
+--cpu ARM920T "led.o" "init.o" "lcd.o" "uart.o" "xyx_320_240.o" "bmp.o" --strict --scatter ".\led.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\led.map" -o "led.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'led.axf'
+### ADS-LD Command File: 'led.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'led.lnp', Handle=0x0000038C
+### Writing '.lnp' file
+### ADS-LD Command file 'led.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

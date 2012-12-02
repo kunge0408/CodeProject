@@ -1,0 +1,10 @@
+.\out-files\guidemo_circle.o: GUIDemo\GUIDEMO_Circle.c
+.\out-files\guidemo_circle.o: .\GUI\core\GUI.h
+.\out-files\guidemo_circle.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guidemo_circle.o: .\Config\GUIConf.h
+.\out-files\guidemo_circle.o: .\GUI\core\GUIType.h
+.\out-files\guidemo_circle.o: .\GUI\core\LCD.h
+.\out-files\guidemo_circle.o: .\GUI\core\GUIVersion.h
+.\out-files\guidemo_circle.o: GUIDemo\GUIDEMO.h
+.\out-files\guidemo_circle.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\guidemo_circle.o: .\Config\LCDConf.h

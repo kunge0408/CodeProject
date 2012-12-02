@@ -1,0 +1,15 @@
+.\out-files\guiaacircle.o: GUI\AntiAlias\GUIAACircle.c
+.\out-files\guiaacircle.o: .\GUI\core\GUI_Protected.h
+.\out-files\guiaacircle.o: .\GUI\core\GUI.h
+.\out-files\guiaacircle.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guiaacircle.o: .\Config\GUIConf.h
+.\out-files\guiaacircle.o: .\GUI\core\GUIType.h
+.\out-files\guiaacircle.o: .\GUI\core\LCD.h
+.\out-files\guiaacircle.o: .\GUI\core\GUIVersion.h
+.\out-files\guiaacircle.o: .\GUI\core\LCD_Protected.h
+.\out-files\guiaacircle.o: .\GUI\core\GUIDebug.h
+.\out-files\guiaacircle.o: .\GUI\core\GUI_X.h
+.\out-files\guiaacircle.o: .\GUI\WM\WM_GUI.h
+.\out-files\guiaacircle.o: E:\Keil\ARM\RV31\INC\stdio.h
+.\out-files\guiaacircle.o: E:\Keil\ARM\RV31\INC\string.h
+.\out-files\guiaacircle.o: E:\Keil\ARM\RV31\INC\math.h

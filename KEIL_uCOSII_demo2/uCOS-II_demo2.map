@@ -1,0 +1,502 @@
+ARM Linker, 4.1 [Build 644] [Standard]
+
+==============================================================================
+
+Section Cross References
+
+    2440_init.o(RESET) refers to app_main.o(.text) for App_Main
+    2440_init.o(RESET) refers to os_cpu_a.o(UCOS_ARM) for OS_CPU_IRQ_ISR
+    os_cpu_a.o(UCOS_ARM) refers (Special) to os_core.o(.text) for OSIntEnter
+    os_cpu_a.o(UCOS_ARM) refers to os_cpu_c.o(.text) for OSTaskSwHook
+    os_cpu_a.o(UCOS_ARM) refers to os_core.o(.data) for OSRunning
+    os_timer4_c.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSTickISR
+    os_flag.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSCPUSaveSR
+    os_flag.o(.text) refers to os_core.o(.text) for OS_Sched
+    os_flag.o(.text) refers to os_core.o(.data) for OSIntNesting
+    os_flag.o(.text) refers to os_core.o(.bss) for OSFlagTbl
+    os_mbox.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSCPUSaveSR
+    os_mbox.o(.text) refers to os_core.o(.text) for OS_EventWaitListInit
+    os_mbox.o(.text) refers to os_core.o(.data) for OSIntNesting
+    os_mem.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSCPUSaveSR
+    os_mem.o(.text) refers to os_core.o(.text) for OS_StrLen
+    os_mem.o(.text) refers to os_core.o(.data) for OSMemFreeList
+    os_mem.o(.text) refers to os_core.o(.bss) for OSMemTbl
+    os_mutex.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSCPUSaveSR
+    os_mutex.o(.text) refers to os_core.o(.text) for OS_EventWaitListInit
+    os_mutex.o(.text) refers to os_core.o(.data) for OSIntNesting
+    os_mutex.o(.text) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_q.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSCPUSaveSR
+    os_q.o(.text) refers to os_core.o(.text) for OS_EventWaitListInit
+    os_q.o(.text) refers to os_core.o(.data) for OSIntNesting
+    os_q.o(.text) refers to os_core.o(.bss) for OSQTbl
+    os_sem.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSCPUSaveSR
+    os_sem.o(.text) refers to os_core.o(.text) for OS_EventWaitListInit
+    os_sem.o(.text) refers to os_core.o(.data) for OSIntNesting
+    os_task.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSCPUSaveSR
+    os_task.o(.text) refers to os_core.o(.text) for OS_Sched
+    os_task.o(.text) refers to os_cpu_c.o(.text) for OSTaskStkInit
+    os_task.o(.text) refers to os_flag.o(.text) for OS_FlagUnlink
+    os_task.o(.text) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_task.o(.text) refers to os_core.o(.data) for OSTCBCur
+    os_time.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSCPUSaveSR
+    os_time.o(.text) refers to os_core.o(.text) for OS_Sched
+    os_time.o(.text) refers to aeabi_sdiv.o(.text_udiv) for __aeabi_uidivmod
+    os_time.o(.text) refers to os_core.o(.data) for OSIntNesting
+    os_time.o(.text) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_tmr.o(.text) refers to os_core.o(.text) for OSSchedLock
+    os_tmr.o(.text) refers to os_core.o(.data) for OSTmrFreeList
+    os_tmr.o(.text) refers to os_core.o(.bss) for OSTmrWheelTbl
+    os_tmr.o(.text) refers to os_sem.o(.text) for OSSemPost
+    os_tmr.o(.text) refers to os_task.o(.text) for OSTaskCreateExt
+    os_core.o(.text) refers to os_cpu_a.o(UCOS_ARM) for OSCPUSaveSR
+    os_core.o(.text) refers to os_task.o(.text) for OSTaskStkChk
+    os_core.o(.text) refers to os_time.o(.text) for OSTimeDly
+    os_core.o(.text) refers to aeabi_sdiv.o(.text_udiv) for __aeabi_uidivmod
+    os_core.o(.text) refers to os_cpu_c.o(.text) for OSTaskStatHook
+    os_core.o(.text) refers to os_core.o(.data) for OSIntNesting
+    os_core.o(.text) refers to os_core.o(.constdata) for OSUnMapTbl
+    os_core.o(.text) refers to os_core.o(.bss) for OSTCBPrioTbl
+    os_core.o(.text) refers to os_flag.o(.text) for OS_FlagInit
+    os_core.o(.text) refers to os_mem.o(.text) for OS_MemInit
+    os_core.o(.text) refers to os_q.o(.text) for OS_QInit
+    os_core.o(.text) refers to os_tmr.o(.text) for OSTmr_Init
+    app_main.o(.text) refers to led_test.o(.text) for LED_negate
+    app_main.o(.text) refers to os_time.o(.text) for OSTimeDlyHMSM
+    app_main.o(.text) refers to os_timer4_c.o(.text) for OSTickEnable
+    app_main.o(.text) refers to os_task.o(.text) for OSTaskCreate
+    app_main.o(.text) refers to os_core.o(.text) for OSInit
+    app_main.o(.text) refers to app_main.o(.data) for LedNo
+    app_main.o(.text) refers to app_main.o(.bss) for TaskTestLedStk
+    aeabi_sdiv.o(.text_udiv) refers to aeabi_sdiv.o(.text) for __arm_div2
+    aeabi_sdiv_div0.o(.text_udiv) refers to aeabi_sdiv_div0.o(.text) for __arm_div2
+    aeabi_idiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    __raise.o(.text) refers to __raise.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing 2440_init.o(RamData), (0 bytes).
+    Removing os_cpu_c.o(.data), (4 bytes).
+    Removing os_mbox.o(.text), (1816 bytes).
+    Removing os_mutex.o(.text), (2664 bytes).
+
+4 unused section(s) (total 4484 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../../angel/rt.s                         0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../../angel/rt.s                         0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
+    ../../angel/rt.s                         0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../../angel/rt.s                         0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../../angel/sys.s                        0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../../angel/sysapp.c                     0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../../angel/sysapp.c                     0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
+    ../../division.s                         0x00000000   Number         0  aeabi_sdiv_div0.o ABSOLUTE
+    ../../divrt.s                            0x00000000   Number         0  divrt_7tdmi.o ABSOLUTE
+    ../../divrt.s                            0x00000000   Number         0  divrt_7tdmi_div0.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  __raise.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../../signal.c                           0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../../signal.s                           0x00000000   Number         0  defsig.o ABSOLUTE
+    App_Main\App_SRC\App_Main.c              0x00000000   Number         0  app_main.o ABSOLUTE
+    CommonFiles\FL2440_BSP\2440BSP_SRC\2440_init.s 0x00000000   Number         0  2440_init.o ABSOLUTE
+    CommonFiles\uCOS-II\uCOS-II_BSP\Os_cpu_a.s 0x00000000   Number         0  os_cpu_a.o ABSOLUTE
+    CommonFiles\uCOS-II\uCOS-II_BSP\Os_cpu_c.c 0x00000000   Number         0  os_cpu_c.o ABSOLUTE
+    CommonFiles\uCOS-II\uCOS-II_BSP\os_timer4_c.c 0x00000000   Number         0  os_timer4_c.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_core.c 0x00000000   Number         0  os_core.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_flag.c 0x00000000   Number         0  os_flag.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_mbox.c 0x00000000   Number         0  os_mbox.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_mem.c 0x00000000   Number         0  os_mem.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_mutex.c 0x00000000   Number         0  os_mutex.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_q.c   0x00000000   Number         0  os_q.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_sem.c 0x00000000   Number         0  os_sem.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_task.c 0x00000000   Number         0  os_task.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_time.c 0x00000000   Number         0  os_time.o ABSOLUTE
+    CommonFiles\uCOS-II\uCoS-II_SRC\os_tmr.c 0x00000000   Number         0  os_tmr.o ABSOLUTE
+    Drivers\LED_test\LED_test_SRC\LED_test.c 0x00000000   Number         0  led_test.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    RESET                                    0x32000000   Section     1328  2440_init.o(RESET)
+    ResetEntry                               0x32000000   ARM Code       0  2440_init.o(RESET)
+    CEntry                                   0x32000280   ARM Code       0  2440_init.o(RESET)
+    InitRamZero                              0x32000470   ARM Code       0  2440_init.o(RESET)
+    .text                                    0x32000530   Section        0  os_cpu_c.o(.text)
+    .text                                    0x3200063c   Section        0  os_timer4_c.o(.text)
+    .text                                    0x32000730   Section        0  os_flag.o(.text)
+    OS_FlagTaskRdy                           0x320009dc   ARM Code     148  os_flag.o(.text)
+    OS_FlagBlock                             0x32000d18   ARM Code     240  os_flag.o(.text)
+    .text                                    0x32001538   Section        0  os_mem.o(.text)
+    .text                                    0x3200188c   Section        0  os_q.o(.text)
+    .text                                    0x32002348   Section        0  os_sem.o(.text)
+    .text                                    0x32002a00   Section        0  os_task.o(.text)
+    .text                                    0x32003778   Section        0  os_time.o(.text)
+    .text                                    0x32003a50   Section        0  os_tmr.o(.text)
+    OSTmr_Alloc                              0x32003a50   ARM Code     108  os_tmr.o(.text)
+    OSTmr_Free                               0x32003b5c   ARM Code     112  os_tmr.o(.text)
+    OSTmr_Unlink                             0x32003bcc   ARM Code     124  os_tmr.o(.text)
+    OSTmr_Link                               0x3200401c   ARM Code     204  os_tmr.o(.text)
+    OSTmr_Task                               0x32004378   ARM Code     200  os_tmr.o(.text)
+    OSTmr_InitTask                           0x32004440   ARM Code      88  os_tmr.o(.text)
+    .text                                    0x32004604   Section        0  os_core.o(.text)
+    OS_SchedNew                              0x320047fc   ARM Code      48  os_core.o(.text)
+    OS_InitTaskStat                          0x32004fe4   ARM Code      92  os_core.o(.text)
+    OS_InitTaskIdle                          0x32005078   ARM Code      92  os_core.o(.text)
+    OS_InitEventList                         0x320050f8   ARM Code     140  os_core.o(.text)
+    OS_InitTCBList                           0x32005184   ARM Code     308  os_core.o(.text)
+    OS_InitRdyList                           0x320052b8   ARM Code      88  os_core.o(.text)
+    OS_InitMisc                              0x32005310   ARM Code      88  os_core.o(.text)
+    .text                                    0x32005c14   Section        0  app_main.o(.text)
+    .text                                    0x32005d0c   Section        0  led_test.o(.text)
+    .text                                    0x32005e80   Section      384  aeabi_sdiv.o(.text)
+    __arm_div8                               0x32005eac   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div5                               0x32005ed0   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div2                               0x32005ef4   ARM Code       0  aeabi_sdiv.o(.text)
+    __arm_div_large                          0x32005f30   ARM Code       0  aeabi_sdiv.o(.text)
+    .text_udiv                               0x32006000   Section       36  aeabi_sdiv.o(.text_udiv)
+    UCOS_ARM                                 0x32006024   Section      444  os_cpu_a.o(UCOS_ARM)
+    .constdata                               0x320061e0   Section      256  os_core.o(.constdata)
+    .data                                    0x33000000   Section       96  os_core.o(.data)
+    .data                                    0x33000060   Section        4  app_main.o(.data)
+    .bss                                     0x33000064   Section     4968  os_core.o(.bss)
+    .bss                                     0x330013cc   Section     5120  app_main.o(.bss)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv1$ARM_ISAv4$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __sigvec_lookup                           - Undefined Weak Reference
+    Image$$RO$$Base                          0x32000000   Number         0  2440_init.o(RESET)
+    __ENTRY                                  0x32000000   ARM Code       0  2440_init.o(RESET)
+    OSTaskStkInit                            0x32000530   ARM Code     216  os_cpu_c.o(.text)
+    OSInitHookBegin                          0x32000608   ARM Code       4  os_cpu_c.o(.text)
+    OSInitHookEnd                            0x3200060c   ARM Code       4  os_cpu_c.o(.text)
+    OSTaskCreateHook                         0x32000610   ARM Code       8  os_cpu_c.o(.text)
+    OSTaskDelHook                            0x32000618   ARM Code       8  os_cpu_c.o(.text)
+    OSTaskSwHook                             0x32000620   ARM Code       4  os_cpu_c.o(.text)
+    OSTaskStatHook                           0x32000624   ARM Code       4  os_cpu_c.o(.text)
+    OSTCBInitHook                            0x32000628   ARM Code       8  os_cpu_c.o(.text)
+    OSTimeTickHook                           0x32000630   ARM Code       4  os_cpu_c.o(.text)
+    OSTaskIdleHook                           0x32000634   ARM Code       4  os_cpu_c.o(.text)
+    OSTaskReturnHook                         0x32000638   ARM Code       4  os_cpu_c.o(.text)
+    Timer4_init                              0x3200063c   ARM Code     160  os_timer4_c.o(.text)
+    OSTickISRInit                            0x320006dc   ARM Code      52  os_timer4_c.o(.text)
+    OSTickEnable                             0x32000710   ARM Code      20  os_timer4_c.o(.text)
+    OSFlagAccept                             0x32000730   ARM Code     432  os_flag.o(.text)
+    OSFlagCreate                             0x320008e0   ARM Code     164  os_flag.o(.text)
+    OS_FlagUnlink                            0x32000984   ARM Code      88  os_flag.o(.text)
+    OSFlagDel                                0x32000a70   ARM Code     416  os_flag.o(.text)
+    OSFlagNameGet                            0x32000c10   ARM Code     144  os_flag.o(.text)
+    OSFlagNameSet                            0x32000ca0   ARM Code     120  os_flag.o(.text)
+    OSFlagPend                               0x32000e08   ARM Code    1016  os_flag.o(.text)
+    OSFlagPendGetFlagsRdy                    0x32001200   ARM Code      48  os_flag.o(.text)
+    OSFlagPost                               0x32001230   ARM Code     548  os_flag.o(.text)
+    OSFlagQuery                              0x32001454   ARM Code      84  os_flag.o(.text)
+    OS_FlagInit                              0x320014a8   ARM Code     128  os_flag.o(.text)
+    OSMemCreate                              0x32001538   ARM Code     204  os_mem.o(.text)
+    OSMemGet                                 0x32001604   ARM Code     112  os_mem.o(.text)
+    OSMemNameGet                             0x32001674   ARM Code     108  os_mem.o(.text)
+    OSMemNameSet                             0x320016e0   ARM Code      88  os_mem.o(.text)
+    OSMemPut                                 0x32001738   ARM Code     100  os_mem.o(.text)
+    OSMemQuery                               0x3200179c   ARM Code     100  os_mem.o(.text)
+    OS_MemInit                               0x32001800   ARM Code     124  os_mem.o(.text)
+    OSQAccept                                0x3200188c   ARM Code     164  os_q.o(.text)
+    OSQCreate                                0x32001930   ARM Code     268  os_q.o(.text)
+    OSQDel                                   0x32001a3c   ARM Code     464  os_q.o(.text)
+    OSQFlush                                 0x32001c0c   ARM Code      68  os_q.o(.text)
+    OSQPend                                  0x32001c50   ARM Code     512  os_q.o(.text)
+    OSQPendAbort                             0x32001e50   ARM Code     236  os_q.o(.text)
+    OSQPost                                  0x32001f3c   ARM Code     208  os_q.o(.text)
+    OSQPostFront                             0x3200200c   ARM Code     212  os_q.o(.text)
+    OSQPostOpt                               0x320020e0   ARM Code     324  os_q.o(.text)
+    OSQQuery                                 0x32002224   ARM Code     168  os_q.o(.text)
+    OS_QInit                                 0x320022cc   ARM Code     112  os_q.o(.text)
+    OSSemAccept                              0x32002348   ARM Code      84  os_sem.o(.text)
+    OSSemCreate                              0x3200239c   ARM Code     148  os_sem.o(.text)
+    OSSemDel                                 0x32002430   ARM Code     400  os_sem.o(.text)
+    OSSemPend                                0x320025c0   ARM Code     440  os_sem.o(.text)
+    OSSemPendAbort                           0x32002778   ARM Code     236  os_sem.o(.text)
+    OSSemPost                                0x32002864   ARM Code     160  os_sem.o(.text)
+    OSSemQuery                               0x32002904   ARM Code     120  os_sem.o(.text)
+    OSSemSet                                 0x3200297c   ARM Code     128  os_sem.o(.text)
+    OSTaskChangePrio                         0x32002a00   ARM Code     652  os_task.o(.text)
+    OSTaskCreate                             0x32002c8c   ARM Code     252  os_task.o(.text)
+    OS_TaskStkClr                            0x32002d88   ARM Code      44  os_task.o(.text)
+    OSTaskCreateExt                          0x32002db4   ARM Code     288  os_task.o(.text)
+    OSTaskDel                                0x32002ed4   ARM Code     560  os_task.o(.text)
+    OSTaskDelReq                             0x32003104   ARM Code     164  os_task.o(.text)
+    OSTaskNameGet                            0x320031a8   ARM Code     200  os_task.o(.text)
+    OSTaskNameSet                            0x32003270   ARM Code     216  os_task.o(.text)
+    OSTaskResume                             0x32003348   ARM Code     260  os_task.o(.text)
+    OSTaskStkChk                             0x3200344c   ARM Code     212  os_task.o(.text)
+    OSTaskSuspend                            0x32003520   ARM Code     248  os_task.o(.text)
+    OSTaskQuery                              0x32003618   ARM Code     136  os_task.o(.text)
+    OSTaskRegGet                             0x320036a0   ARM Code      92  os_task.o(.text)
+    OSTaskRegSet                             0x320036fc   ARM Code      92  os_task.o(.text)
+    OS_TaskReturn                            0x32003758   ARM Code      32  os_task.o(.text)
+    OSTimeDly                                0x32003778   ARM Code     196  os_time.o(.text)
+    OSTimeDlyHMSM                            0x3200383c   ARM Code     140  os_time.o(.text)
+    OSTimeDlyResume                          0x320038c8   ARM Code     276  os_time.o(.text)
+    OSTimeGet                                0x320039dc   ARM Code      44  os_time.o(.text)
+    OSTimeSet                                0x32003a08   ARM Code      44  os_time.o(.text)
+    OSTmrCreate                              0x32003abc   ARM Code     160  os_tmr.o(.text)
+    OSTmrDel                                 0x32003c48   ARM Code     236  os_tmr.o(.text)
+    OSTmrNameGet                             0x32003d34   ARM Code     240  os_tmr.o(.text)
+    OSTmrRemainGet                           0x32003e24   ARM Code     324  os_tmr.o(.text)
+    OSTmrStateGet                            0x32003f68   ARM Code     180  os_tmr.o(.text)
+    OSTmrStart                               0x320040e8   ARM Code     244  os_tmr.o(.text)
+    OSTmrStop                                0x320041dc   ARM Code     380  os_tmr.o(.text)
+    OSTmrSignal                              0x32004358   ARM Code      32  os_tmr.o(.text)
+    OSTmr_Init                               0x32004498   ARM Code     276  os_tmr.o(.text)
+    OS_StrLen                                0x32004604   ARM Code      40  os_core.o(.text)
+    OSEventNameGet                           0x3200462c   ARM Code     192  os_core.o(.text)
+    OSEventNameSet                           0x320046ec   ARM Code     168  os_core.o(.text)
+    OS_EventTaskRemoveMulti                  0x32004794   ARM Code     104  os_core.o(.text)
+    OS_Sched                                 0x3200482c   ARM Code     168  os_core.o(.text)
+    OS_EventTaskWaitMulti                    0x320048d4   ARM Code     244  os_core.o(.text)
+    OSEventPendMulti                         0x320049c8   ARM Code    1260  os_core.o(.text)
+    OS_TaskStatStkChk                        0x32004eb4   ARM Code     108  os_core.o(.text)
+    OS_TaskStat                              0x32004f20   ARM Code     196  os_core.o(.text)
+    OS_TaskIdle                              0x32005040   ARM Code      56  os_core.o(.text)
+    OS_MemClr                                0x320050d4   ARM Code      36  os_core.o(.text)
+    OSInit                                   0x32005368   ARM Code      60  os_core.o(.text)
+    OSIntEnter                               0x320053a4   ARM Code      56  os_core.o(.text)
+    OSIntExit                                0x320053dc   ARM Code     220  os_core.o(.text)
+    OSSchedLock                              0x320054b8   ARM Code     100  os_core.o(.text)
+    OSSchedUnlock                            0x3200551c   ARM Code     156  os_core.o(.text)
+    OSStart                                  0x320055b8   ARM Code      92  os_core.o(.text)
+    OSStatInit                               0x32005614   ARM Code     104  os_core.o(.text)
+    OSTimeTick                               0x3200567c   ARM Code     392  os_core.o(.text)
+    OSVersion                                0x32005804   ARM Code       8  os_core.o(.text)
+    OS_Dummy                                 0x3200580c   ARM Code       4  os_core.o(.text)
+    OS_EventTaskRemove                       0x32005810   ARM Code      64  os_core.o(.text)
+    OS_EventTaskRdy                          0x32005850   ARM Code     200  os_core.o(.text)
+    OS_EventTaskWait                         0x32005918   ARM Code     188  os_core.o(.text)
+    OS_EventWaitListInit                     0x320059d4   ARM Code      52  os_core.o(.text)
+    OS_MemCopy                               0x32005a08   ARM Code      36  os_core.o(.text)
+    OS_TCBInit                               0x32005a2c   ARM Code     464  os_core.o(.text)
+    TaskTestLed                              0x32005c14   ARM Code      68  app_main.o(.text)
+    TaskStart                                0x32005c58   ARM Code     108  app_main.o(.text)
+    AppInit                                  0x32005cc4   ARM Code      16  app_main.o(.text)
+    App_Main                                 0x32005cd4   ARM Code      44  app_main.o(.text)
+    LED_IO_init                              0x32005d0c   ARM Code      96  led_test.o(.text)
+    LED_negate                               0x32005d6c   ARM Code     124  led_test.o(.text)
+    Delay                                    0x32005de8   ARM Code      60  led_test.o(.text)
+    LED_flow                                 0x32005e24   ARM Code      88  led_test.o(.text)
+    __aeabi_idiv                             0x32005e80   ARM Code       0  aeabi_sdiv.o(.text)
+    __aeabi_idivmod                          0x32005e80   ARM Code     384  aeabi_sdiv.o(.text)
+    __aeabi_uidiv                            0x32006000   ARM Code       0  aeabi_sdiv.o(.text_udiv)
+    __aeabi_uidivmod                         0x32006000   ARM Code      36  aeabi_sdiv.o(.text_udiv)
+    OSStartHighRdy                           0x32006024   ARM Code       0  os_cpu_a.o(UCOS_ARM)
+    OSCtxSw                                  0x32006050   ARM Code       0  os_cpu_a.o(UCOS_ARM)
+    OSTickISR                                0x320060a8   ARM Code       0  os_cpu_a.o(UCOS_ARM)
+    OSIntCtxSw                               0x320060d8   ARM Code       0  os_cpu_a.o(UCOS_ARM)
+    OS_CPU_IRQ_ISR                           0x32006114   ARM Code       0  os_cpu_a.o(UCOS_ARM)
+    OSCPUSaveSR                              0x32006198   ARM Code       0  os_cpu_a.o(UCOS_ARM)
+    OSCPURestoreSR                           0x320061b8   ARM Code       0  os_cpu_a.o(UCOS_ARM)
+    OSUnMapTbl                               0x320061e0   Data         256  os_core.o(.constdata)
+    Image$$RO$$Limit                         0x320062e0   Number         0  os_core.o(.constdata)
+    Image$$RW$$Base                          0x33000000   Number         0  os_core.o(.data)
+    OSCtxSwCtr                               0x33000000   Data           4  os_core.o(.data)
+    OSEventFreeList                          0x33000004   Data           4  os_core.o(.data)
+    OSFlagFreeList                           0x33000008   Data           4  os_core.o(.data)
+    OSCPUUsage                               0x3300000c   Data           1  os_core.o(.data)
+    OSIdleCtrMax                             0x33000010   Data           4  os_core.o(.data)
+    OSIdleCtrRun                             0x33000014   Data           4  os_core.o(.data)
+    OSStatRdy                                0x33000018   Data           1  os_core.o(.data)
+    OSIntNesting                             0x33000019   Data           1  os_core.o(.data)
+    OSLockNesting                            0x3300001a   Data           1  os_core.o(.data)
+    OSPrioCur                                0x3300001b   Data           1  os_core.o(.data)
+    OSPrioHighRdy                            0x3300001c   Data           1  os_core.o(.data)
+    OSRdyGrp                                 0x3300001d   Data           1  os_core.o(.data)
+    OSRdyTbl                                 0x3300001e   Data           8  os_core.o(.data)
+    OSRunning                                0x33000026   Data           1  os_core.o(.data)
+    OSTaskCtr                                0x33000027   Data           1  os_core.o(.data)
+    OSIdleCtr                                0x33000028   Data           4  os_core.o(.data)
+    OSTCBCur                                 0x3300002c   Data           4  os_core.o(.data)
+    OSTCBFreeList                            0x33000030   Data           4  os_core.o(.data)
+    OSTCBHighRdy                             0x33000034   Data           4  os_core.o(.data)
+    OSTCBList                                0x33000038   Data           4  os_core.o(.data)
+    OSTickStepState                          0x3300003c   Data           1  os_core.o(.data)
+    OSMemFreeList                            0x33000040   Data           4  os_core.o(.data)
+    OSQFreeList                              0x33000044   Data           4  os_core.o(.data)
+    OSTime                                   0x33000048   Data           4  os_core.o(.data)
+    OSTmrFree                                0x3300004c   Data           2  os_core.o(.data)
+    OSTmrUsed                                0x3300004e   Data           2  os_core.o(.data)
+    OSTmrTime                                0x33000050   Data           4  os_core.o(.data)
+    OSTmrSem                                 0x33000054   Data           4  os_core.o(.data)
+    OSTmrSemSignal                           0x33000058   Data           4  os_core.o(.data)
+    OSTmrFreeList                            0x3300005c   Data           4  os_core.o(.data)
+    LedNo                                    0x33000060   Data           4  app_main.o(.data)
+    Image$$ZI$$Base                          0x33000064   Number         0  anon$$obj.o(linker$$defined$$symbols)
+    Image$$ZI$$Limit                         0x33000064   Number         0  anon$$obj.o(linker$$defined$$symbols)
+    OSEventTbl                               0x33000064   Data         240  os_core.o(.bss)
+    OSFlagTbl                                0x33000154   Data          80  os_core.o(.bss)
+    OSTaskStatStk                            0x330001a4   Data         512  os_core.o(.bss)
+    OSTaskIdleStk                            0x330003a4   Data         512  os_core.o(.bss)
+    OSTCBPrioTbl                             0x330005a4   Data         256  os_core.o(.bss)
+    OSTCBTbl                                 0x330006a4   Data        1936  os_core.o(.bss)
+    OSMemTbl                                 0x33000e34   Data         120  os_core.o(.bss)
+    OSQTbl                                   0x33000eac   Data          96  os_core.o(.bss)
+    OSTmrTbl                                 0x33000f0c   Data         640  os_core.o(.bss)
+    OSTmrTaskStk                             0x3300118c   Data         512  os_core.o(.bss)
+    OSTmrWheelTbl                            0x3300138c   Data          64  os_core.o(.bss)
+    TaskStartStk                             0x330013cc   Data        1024  app_main.o(.bss)
+    TaskTestLedStk                           0x330017cc   Data        4096  app_main.o(.bss)
+    HandleEINT0                              0x33ffff20   Data           4  2440_init.o ABSOLUTE
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x32000000
+
+  Load Region LR_IROM1 (Base: 0x32000000, Size: 0x00006344, Max: 0x01000000, ABSOLUTE)
+
+    Execution Region RO (Base: 0x32000000, Size: 0x000062e0, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x32000000   0x00000530   Code   RO            1  * RESET               2440_init.o
+    0x32000530   0x0000010c   Code   RO            7    .text               os_cpu_c.o
+    0x3200063c   0x000000f4   Code   RO           39    .text               os_timer4_c.o
+    0x32000730   0x00000e08   Code   RO           66    .text               os_flag.o
+    0x32001538   0x00000354   Code   RO           90    .text               os_mem.o
+    0x3200188c   0x00000abc   Code   RO          114    .text               os_q.o
+    0x32002348   0x000006b8   Code   RO          126    .text               os_sem.o
+    0x32002a00   0x00000d78   Code   RO          138    .text               os_task.o
+    0x32003778   0x000002d8   Code   RO          150    .text               os_time.o
+    0x32003a50   0x00000bb4   Code   RO          162    .text               os_tmr.o
+    0x32004604   0x00001610   Code   RO          174    .text               os_core.o
+    0x32005c14   0x000000f8   Code   RO          194    .text               app_main.o
+    0x32005d0c   0x00000174   Code   RO          216    .text               led_test.o
+    0x32005e80   0x00000180   Code   RO          230    .text               c_t.l(aeabi_sdiv.o)
+    0x32006000   0x00000024   Code   RO          231    .text_udiv          c_t.l(aeabi_sdiv.o)
+    0x32006024   0x000001bc   Code   RO           36    UCOS_ARM            os_cpu_a.o
+    0x320061e0   0x00000100   Data   RO          176    .constdata          os_core.o
+
+
+    Execution Region RW (Base: 0x33000000, Size: 0x00000064, Max: 0x01000000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x33000000   0x00000060   Data   RW          177    .data               os_core.o
+    0x33000060   0x00000004   Data   RW          196    .data               app_main.o
+
+
+    Execution Region ZI (Base: 0x33000064, Size: 0x00002768, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x33000064   0x00000000   Data   RW          293    linker$$defined$$symbols  anon$$obj.o
+    0x33000064   0x00001368   Zero   RW          175    .bss                os_core.o
+    0x330013cc   0x00001400   Zero   RW          195    .bss                app_main.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1328        188          0          0          0        564   2440_init.o
+       248         12          0          4       5120       1405   app_main.o
+       372          4          0          0          0        996   led_test.o
+      5648        168        256         96       4968      19283   os_core.o
+       444         36          0          0          0        344   os_cpu_a.o
+       268          0          0          0          0      12801   os_cpu_c.o
+      3592         36          0          0          0       7476   os_flag.o
+       852         16          0          0          0       3416   os_mem.o
+      2748         28          0          0          0       6081   os_q.o
+      1720         24          0          0          0       4358   os_sem.o
+      3448         44          0          0          0       8265   os_task.o
+       728         28          0          0          0       1958   os_time.o
+       244         12          0          0          0        669   os_timer4_c.o
+      2996        112          0          0          0       5965   os_tmr.o
+
+    ----------------------------------------------------------------------
+     24636        708        256        100      10088      73581   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         0          0          0          0          0          3   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+       420          0          0          0          0        148   aeabi_sdiv.o
+
+    ----------------------------------------------------------------------
+       420          0          0          0          0        148   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       420          0          0          0          0        148   c_t.l
+
+    ----------------------------------------------------------------------
+       420          0          0          0          0        148   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     25056        708        256        100      10088      72952   Grand Totals
+     25056        708        256        100      10088      72952   ELF Image Totals
+     25056        708        256        100          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                25312 (  24.72kB)
+    Total RW  Size (RW Data + ZI Data)             10188 (   9.95kB)
+    Total ROM Size (Code + RO Data + RW Data)      25412 (  24.82kB)
+
+==============================================================================
+

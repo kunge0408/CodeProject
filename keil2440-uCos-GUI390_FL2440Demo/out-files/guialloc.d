@@ -1,0 +1,14 @@
+.\out-files\guialloc.o: GUI\core\GUIAlloc.c
+.\out-files\guialloc.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\guialloc.o: E:\Keil\ARM\RV31\INC\string.h
+.\out-files\guialloc.o: GUI\core\GUI_Protected.h
+.\out-files\guialloc.o: GUI\core\GUI.h
+.\out-files\guialloc.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\guialloc.o: .\Config\GUIConf.h
+.\out-files\guialloc.o: GUI\core\GUIType.h
+.\out-files\guialloc.o: GUI\core\LCD.h
+.\out-files\guialloc.o: GUI\core\GUIVersion.h
+.\out-files\guialloc.o: GUI\core\LCD_Protected.h
+.\out-files\guialloc.o: GUI\core\GUIDebug.h
+.\out-files\guialloc.o: GUI\core\GUI_X.h
+.\out-files\guialloc.o: .\GUI\WM\WM_GUI.h

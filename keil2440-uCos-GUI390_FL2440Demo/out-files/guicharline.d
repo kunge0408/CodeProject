@@ -1,0 +1,14 @@
+.\out-files\guicharline.o: GUI\core\GUICharLine.c
+.\out-files\guicharline.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\guicharline.o: E:\Keil\ARM\RV31\INC\stdio.h
+.\out-files\guicharline.o: GUI\core\GUI_Protected.h
+.\out-files\guicharline.o: GUI\core\GUI.h
+.\out-files\guicharline.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\guicharline.o: .\Config\GUIConf.h
+.\out-files\guicharline.o: GUI\core\GUIType.h
+.\out-files\guicharline.o: GUI\core\LCD.h
+.\out-files\guicharline.o: GUI\core\GUIVersion.h
+.\out-files\guicharline.o: GUI\core\LCD_Protected.h
+.\out-files\guicharline.o: GUI\core\GUIDebug.h
+.\out-files\guicharline.o: GUI\core\GUI_X.h
+.\out-files\guicharline.o: .\GUI\WM\WM_GUI.h

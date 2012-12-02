@@ -1,0 +1,234 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>长沙市元享电子科技有限公司</title>
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<script language="javascript" src="js/common.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="314"><a href="./"><img src="images/index_03.jpg" border="0"></a></td>
+<td width="630" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="font-size:13px; color:#666666;padding:10px 0px 20px 0px" height="13" ><a href="Orders.asp"><img src="images/index_05.jpg" border="0" style="vertical-align:middle"></a><a href="#设为首页" onclick="javascript:setHomepage();return false">设为首页</a> | <a href="#加入收藏" onclick="javascript:addCookie();return false">加入收藏</a> | <a href="ContactUs.asp">联系我们</a> </td>
+</tr>
+<tr>
+<td style="background:url(images/index_09.jpg) no-repeat; text-align:center; line-height:28px; color:#FFFFFF; font-size:14px" height="45" valign="top"><a href="./" class="link2">首页</a> | <a href="About.asp" class="link2">公司概况</a> | <a href="News.asp" class="link2">新闻资讯</a> | <a href="Product.asp" class="link2">产品中心</a> | <a href="Online.asp" class="link2">芯片订购</a> | <a href="http://www.yxarm.net" class="link2" target="_blank">公司论坛</a> | <a href="Tech.asp" class="link2">技术资料</a> | <a href="Job.asp" class="link2">招贤纳士</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
+<tr>
+<td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="944" height="153">
+  <param name="movie" value="flash/banner.swf" />
+  <param name="quality" value="high" />
+  <embed src="flash/banner.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="944" height="153"></embed>
+</object></td>
+</tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
+<tr>
+<td width="100%" valign="top" style="border:#419AB8 1px solid; padding-top:10px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="22" style="background:#0279A1; color:#ffffff; padding-left:10px;">您现在的位置：<a href="Index.asp" class="link5">首页</a> >> <a href="Tech.asp"><font color="#FFFFFF">技术资料</font></a>  </td>
+  </tr>
+  <tr>
+    <td style="padding:20px;" valign="top">
+	 <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td height="41" align="center"  style="color:#FF0000;font-size:14px;"><strong>Scatter文件编写</strong></td>
+</tr>
+	 
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding:20px; line-height:24px;">
+	<DIV align=center><B>Scatter</B><B>文件编写</B><B></B></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 一个映像文件中可以包含多个域（region），在加载和运行映像文件时，每个域可以有不同的地址。每个域可以包括多达3个输出段，每个输出段是由若干个具有相同属性的输入段组成。这样在生成映像文件时，ARM链接器就需要知道下述两个信息。</DIV>
+<UL>
+<LI>分组信息&nbsp;&nbsp;&nbsp; 决定各域中的输出段是由哪些输入段组织而成；</LI>
+<LI>定位信息&nbsp;&nbsp;&nbsp; 决定各域在存储空间中的起始地址。</LI></UL>
+<DIV>&nbsp;&nbsp;&nbsp; 根据映像文件中地址映射的复杂程度，有两种方法来告诉ARM链接器这些相关的信息。对于映像文件中地址映射关系比较简单的情况，可以使用命令行选项；对于映像文件中地址映射关系比较复杂的情况，可以使用一个scatter配置文件。Scatter文件又称为分散加载文件，将重点讲解如何编写scatter文件。</DIV>
+<DIV><B>1</B><B>、Scatter文件结构</B></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; Scatter文件是一个文本文件，使用BNF语法来描述ARM链接器生成映像文件时所需要的信息。具体来说，在scatter文件中可以指定下列信息：</DIV>
+<UL>
+<LI>各个加载时域的加载时起始地址、最大尺寸和属性；</LI>
+<LI>每个加载时域包含的输出段；</LI>
+<LI>各个输出段的运行时起始地址、最大尺寸、存储访问特性和属性；</LI>
+<LI>各个输出段中包含的输入段。</LI></UL>
+<DIV>&nbsp;&nbsp;&nbsp; 一个Scatter文件包含若干个加载域，一个加载域包含若干个输出段，一个输出段由若干个具有相同属性的输入段组成，其结构如图1所示。</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="HTTP://www.yxarm.com/UpFiles/200952992820649.jpg" onload=javascript:DrawImage(this,500,400) border=0></DIV>
+<DIV></DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 图1 Scatter文件结构示意图</DIV>
+<DIV><B>&nbsp;&nbsp;&nbsp; ① </B><B>加载时域的描述</B></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 加载时域包括名称、起始地址、属性、最大尺寸和一个运行时域的列表。使用BNF语法描述，加载时域的格式如下所示：</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=1>
+<TBODY>
+<TR>
+<TD vAlign=top width="100%">
+<DIV>Load_name &nbsp;&nbsp;&nbsp;&nbsp; base_designator&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; attribute &nbsp;&nbsp;&nbsp;&nbsp; max_size</DIV>
+<DIV>{</DIV>
+<DIV><B>……</B></DIV>
+<DIV>}</DIV></TD></TR></TBODY></TABLE>
+<UL>
+<LI>Load_name&nbsp;&nbsp; 运行时域名称，它除了唯一地标识一个运行时域外，还用来构成链接器生成的链接符号；</LI>
+<LI>base_designator 用来表示本加载时域的起始地址，它可以有两种格式表示：起始地址或偏移量；&nbsp; </LI>
+<LI>attribute&nbsp;&nbsp; 本加载时域的属性，其可能的取值为下面之一，默认的取值为ABSOLUTE：</LI>
+<LI>&nbsp;&nbsp;&nbsp; PI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 位置无关属性；</LI>
+<LI>&nbsp;&nbsp;&nbsp; RELOC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 重定位；</LI>
+<LI>&nbsp;&nbsp;&nbsp; ABSOLUTE &nbsp;&nbsp; 绝对地址；&nbsp; </LI>
+<LI>max_size 最大尺寸，如果本加载时域的实际尺寸超过了该值，链接器将报告错误。默认的取值为0xFFFFFFFF。</LI></UL>
+<DIV><B>&nbsp;&nbsp;&nbsp; ② </B><B>输出段的描述</B></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 输出段包括名称、起始地址、属性、最大尺寸和一个输入段的集合。使用BNF语法描述，输出段的格式如下所示：</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=1>
+<TBODY>
+<TR>
+<TD vAlign=top width="100%">
+<DIV>output_name &nbsp;&nbsp;&nbsp; base_designator &nbsp;&nbsp;&nbsp; attribute&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; max_size</DIV>
+<DIV>{</DIV>
+<DIV><B>……</B></DIV>
+<DIV>}</DIV></TD></TR></TBODY></TABLE>
+<UL>
+<LI>output_name 输出段的名称，它用来唯一地标识一个输出段，还用来构成链接器生成的链接符号。</LI>
+<LI>base_designator 用来表示本输出段的起始地址，它可以有两种格式：起始地址值或偏移量。</LI>
+<LI>attribute&nbsp;&nbsp; 表示本输出段的属性，其可能的取值如下所示：</LI>
+<LI>&nbsp;&nbsp;&nbsp;&nbsp;PI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 位置无关属性</LI>
+<LI>&nbsp;&nbsp;&nbsp; RELOC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 重定位</LI>
+<LI>&nbsp;&nbsp;&nbsp; ABSOLUTE&nbsp;&nbsp;&nbsp; 绝对地址</LI>
+<LI>&nbsp;&nbsp;&nbsp; FIXED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 固定地址</LI>
+<LI>&nbsp;&nbsp;&nbsp; UNINIT &nbsp;&nbsp;&nbsp;&nbsp; 未初始化的数据</LI>
+<LI>max_size&nbsp;&nbsp;&nbsp; 指定本输出段的最大尺寸。</LI></UL>
+<DIV><B>&nbsp;&nbsp;&nbsp; ③ </B><B>输入段的描述</B></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 输入段里描述了一个文本字符串的模式，匹配该模式的输入段都将被包含在当前域中。模式中可以使用匹配符，符号＂*＂代表零个或者多个字符，符号＂?＂代表单个字符。进行匹配时，所有字符是大小写无关的。</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 下面介绍一些使用scatter文件配置映像文件地址映射模式的例子。在本例中，映像文件包括一个加载时域和3个连续的输出段，这种模式适合于那些将其他程序加载到RAM中的程序，如操作系统的引导程序和Angel等。</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 例子&nbsp;&nbsp;&nbsp; 一个简单的scatter文件&nbsp; </DIV>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=1>
+<TBODY>
+<TR>
+<TD vAlign=top width="100%">
+<DIV>Load_1&nbsp;&nbsp; 0x4000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；定义加载时域的名称为Load_1，起始地址为0x4000</DIV>
+<DIV>{</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ER_RO&nbsp;&nbsp;&nbsp; + 0&nbsp;&nbsp;&nbsp;&nbsp; ；输出段名ER_RO，地址偏移量0，所以起始地址为0x4000</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; { *( + RO) }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；通配符*，包含了所有的RO属性的输入段，它们被连续放置</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ER_RW&nbsp;&nbsp;&nbsp; + 0&nbsp;&nbsp;&nbsp;&nbsp; ；输出段名称ER_RW，起始地址为前一个输出段的结束地址加偏移量0</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; { *( +&nbsp; RW) }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；本输出段包含所有的RW属性的输入段，它们被连续放置</DIV>
+<DIV>ER_ZI 0x5000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；输出段名称ER_ZI，起始地址为0x5000</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; { *( +&nbsp; ZI) }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；本输出段包含了所有的ZI属性的输入段，它们被连续放置</DIV>
+<DIV>}</DIV></TD></TR></TBODY></TABLE>
+<DIV>&nbsp;&nbsp;&nbsp; 按照例 scatter文件的描述，ARM链接器会生成相应的映像文件地址映射关系，如图2所示。</DIV>
+<DIV></DIV>
+<DIV><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; FONT-FAMILY: 宋体; mso-bidi-font-size: 10.0pt; mso-font-kerning: 1.0pt; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><?xml:namespace prefix = v ns = "urn:schemas-microsoft-com:vml" /><v:shapetype id=_x0000_t75 stroked="f" filled="f" path="m@4@5l@4@11@9@11@9@5xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="HTTP://www.yxarm.com/UpFiles/200952992846643.jpg" onload=javascript:DrawImage(this,500,400) border=0><v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"></v:f><v:f eqn="sum @0 1 0"></v:f><v:f eqn="sum 0 0 @1"></v:f><v:f eqn="prod @2 1 2"></v:f><v:f eqn="prod @3 21600 pixelWidth"></v:f><v:f eqn="prod @3 21600 pixelHeight"></v:f><v:f eqn="sum @0 0 1"></v:f><v:f eqn="prod @6 1 2"></v:f><v:f eqn="prod @7 21600 pixelWidth"></v:f><v:f eqn="sum @8 21600 0"></v:f><v:f eqn="prod @7 21600 pixelHeight"></v:f><v:f eqn="sum @10 21600 0"></v:f></v:formulas><v:path o:connecttype="rect" gradientshapeok="t" o:extrusionok="f"></v:path><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:lock aspectratio="t" v:ext="edit"></o:lock></v:shapetype></SPAN></DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 图2 程序运行时地址映射关系</DIV>
+<DIV><B></B>&nbsp;</DIV>
+<DIV><B>2</B><B>、固定时域</B></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 任何一个映像文件都需要指定一个初始入口点（initial entry point），它是影响文件运行时的入口点。初始入口点必须位于一个固定域中，所谓固定域是指该域的加载时地址和运行时地址是相同的。如果初始入口点不是位于一个固定域中，ARM链接器在链接时会产生下面的错误信息。</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; L6203E：Entry point (0x0000 0000) lies within non-root region 32 bit RAM</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 使用scatter文件时，可以有下面两种方法来设置固定域。</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><B>&nbsp;&nbsp;&nbsp; ① </B><B>设置输出段地址</B></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 第1种方法是设定一个加载域中第1个输出段的运行地址，使其和该加载域的加载地址相同。这样该输出段就是一个固定域。</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 例1就使用这种方法确定固定域。其中，加载域LR_1的起始地址为0x8000，输出段ER_RO的起始地址指定为0x8000，与加载域LR_1的起始地址相同，因此，输出段ER_RO是一个固定域，并且是映像文件的初始入口点。</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 例1 指定固定域</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=1>
+<TBODY>
+<TR>
+<TD vAlign=top width="100%">
+<DIV>LR_1 0x08000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；加载域LR_1的起始地址为0x8000</DIV>
+<DIV>{</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; ER_RO 0x08000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；输出段ER_RO的起始地址为0x8000</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; {</DIV>
+<DIV>*( +&nbsp; RO)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；包含了所有的RO数据，包含初始入口点</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; }</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; ；其他部分内容</DIV>
+<DIV>}</DIV></TD></TR></TBODY></TABLE>
+<DIV><B>&nbsp;&nbsp;&nbsp; ② </B><B>设置输出段属性</B></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 第2种方法通过将某个输出段的属性设置成FIXED。</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 例2指定固定域</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=1>
+<TBODY>
+<TR>
+<TD vAlign=top width="100%">
+<DIV>LR_1 0x8000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；加载时域LR_1的起始地址为0x8000</DIV>
+<DIV>{</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; ER_RO&nbsp;&nbsp;&nbsp; 0x8000</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; {</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *( +&nbsp; RO)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；除了init.o之外的其他RO数据</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; }</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; ER_INIT 0x9000 FIXED&nbsp;&nbsp; ；设置输出段属性为FIXED，确定固定域</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; {</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; init.o( +&nbsp; RO)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；本输出段包含了init.o，包含映像文件的初始入口点</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; }</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; ；其他部分内容</DIV>
+<DIV>}</DIV></TD></TR></TBODY></TABLE>
+<DIV><B></B>&nbsp;</DIV>
+<DIV><B>3</B><B>、一个实际系统的例子</B></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 在一个嵌入式设备中，为了保持好的性价比，通常在系统中存在多种存储器。在一个实际的ARM开发板中，可能包括片内Flash、RAM和片外Flash、RAM。在本例中，我们假设用ARM芯片构造了一个嵌入式系统，包含了8KB片内Flash存储器、16KB片内RAM存储器、起始地址为0x80000000的片外Flash和起始地址为0x81000000的片外RAM，其地址空间分配关系如图3所示。</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 在这样的ARM系统中，我们编写了程序，并且按照例3中的分散加载文件对映象文件的地址进行分配。分配后的地址映像关系如图4所示。</DIV>
+<DIV></DIV>
+<DIV>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <IMG src="HTTP://www.yxarm.com/UpFiles/20095299298313.jpg" onload=javascript:DrawImage(this,500,400) border=0>&nbsp; <IMG src="HTTP://www.yxarm.com/UpFiles/200952992925216.jpg" onload=javascript:DrawImage(this,500,400) border=0></DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 图3 ARM系统中的地址空间&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;图4 地址映像关系</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 从图4中可以看出：可执行代码都放在片外Flash中，并且Vectors向量表放在片外Flash的起始地址上；Startup目标文件的数据放置在片内RAM中，堆栈放在片内RAM的顶端；其他数据放置在片外RAM中，堆空间紧跟其后。</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; 例3 片外Flash启动程序的scatter文件</DIV>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=1>
+<TBODY>
+<TR>
+<TD vAlign=top width="100%">
+<DIV>ROM_LOAD &nbsp;0x80000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；定义加载区名称ROM_LOAD，起始地址0x80000000</DIV>
+<DIV>{</DIV>
+<DIV>&nbsp;&nbsp; &nbsp; ROM_EXE&nbsp; 0x80000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；定义执行代码空间，起始地址与加载域地址相同</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; {</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Startup.o (vectors,&nbsp; +First)&nbsp;&nbsp;&nbsp;&nbsp; ；首先放置Startup.o文件的向量表vectors</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * ( +RO)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；后面地址空间放置其他RO属性代码</DIV>
+<DIV>}&nbsp; </DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;&nbsp;&nbsp;&nbsp; IRAM &nbsp;0x40000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；定义数据空间</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp; Startup.o ( +RW, +ZI) &nbsp; }</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>STACKS&nbsp; 0x40004000&nbsp; UNINIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；定义堆栈空间</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp; stack.o ( +ZI)&nbsp;&nbsp;&nbsp; }</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; ERAM&nbsp; 0x81000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；定义数据空间</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp; * ( +RW, +ZI)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；剩下未指定空间的所有数据</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; </DIV>
+<DIV>&nbsp;&nbsp;&nbsp; HEAP + 0&nbsp; UNINIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ；定义堆空间</DIV>
+<DIV>&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp; heap.o ( +ZI)&nbsp;&nbsp;&nbsp; }</DIV>
+<DIV>}</DIV></TD></TR></TBODY></TABLE>
+<DIV>&nbsp;</DIV>
+
+	</td>
+  </tr>
+ 
+</table>
+    </td>
+  </tr>
+</table>
+
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px; background:url(images/index_48.jpg) repeat-x">
+<tr>
+<td height="30" align="center" style="padding-top:20px;">长沙市元享电子科技有限公司&nbsp; &nbsp;&nbsp; 公司地址：湖南省长沙市雨花区德馨园&nbsp; &nbsp; &nbsp;电话：0731-83594088</td>
+</tr>
+<tr>
+<td align="center" height="20">版权所有 Copyright 2009-2012 All Rights Reserved 湘ICP备165454号 技术支持：<a href="http://www.inemd.net" target="_blank" style="color:#FF0000">网嵌科技</a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.\out-files\guicharp.o: GUI\core\GUICharP.c
+.\out-files\guicharp.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\guicharp.o: GUI\core\GUI_Private.h
+.\out-files\guicharp.o: GUI\core\GUI_Protected.h
+.\out-files\guicharp.o: GUI\core\GUI.h
+.\out-files\guicharp.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\guicharp.o: .\Config\GUIConf.h
+.\out-files\guicharp.o: GUI\core\GUIType.h
+.\out-files\guicharp.o: GUI\core\LCD.h
+.\out-files\guicharp.o: GUI\core\GUIVersion.h
+.\out-files\guicharp.o: GUI\core\LCD_Protected.h
+.\out-files\guicharp.o: GUI\core\GUIDebug.h
+.\out-files\guicharp.o: GUI\core\GUI_X.h
+.\out-files\guicharp.o: .\GUI\WM\WM_GUI.h
+.\out-files\guicharp.o: GUI\core\LCD_Private.h
+.\out-files\guicharp.o: GUI\core\LCD_ConfDefaults.h
+.\out-files\guicharp.o: .\Config\LCDConf.h

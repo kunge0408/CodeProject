@@ -1,0 +1,34 @@
+*** Creating Trace Output File '.\OutPutFiles\uCOS-II_demo2.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\outputfiles\2440_init.o"'
+### List of Objects: adding '".\outputfiles\os_cpu_c.o"'
+### List of Objects: adding '".\outputfiles\os_cpu_a.o"'
+### List of Objects: adding '".\outputfiles\os_timer4_c.o"'
+### List of Objects: adding '".\outputfiles\os_flag.o"'
+### List of Objects: adding '".\outputfiles\os_mbox.o"'
+### List of Objects: adding '".\outputfiles\os_mem.o"'
+### List of Objects: adding '".\outputfiles\os_mutex.o"'
+### List of Objects: adding '".\outputfiles\os_q.o"'
+### List of Objects: adding '".\outputfiles\os_sem.o"'
+### List of Objects: adding '".\outputfiles\os_task.o"'
+### List of Objects: adding '".\outputfiles\os_time.o"'
+### List of Objects: adding '".\outputfiles\os_tmr.o"'
+### List of Objects: adding '".\outputfiles\os_core.o"'
+### List of Objects: adding '".\outputfiles\app_main.o"'
+### List of Objects: adding '".\outputfiles\led_test.o"'
+### ADS-LD Command completed:
+--cpu ARM920T ".\outputfiles\2440_init.o" ".\outputfiles\os_cpu_c.o" ".\outputfiles\os_cpu_a.o" ".\outputfiles\os_timer4_c.o" ".\outputfiles\os_flag.o" ".\outputfiles\os_mbox.o" ".\outputfiles\os_mem.o" ".\outputfiles\os_mutex.o" ".\outputfiles\os_q.o" ".\outputfiles\os_sem.o" ".\outputfiles\os_task.o" ".\outputfiles\os_time.o" ".\outputfiles\os_tmr.o" ".\outputfiles\os_core.o" ".\outputfiles\app_main.o" ".\outputfiles\led_test.o" --strict --scatter ".\ScatterFlies\uCOS-II_demo.sct" 
+--entry __ENTRY --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\uCOS-II_demo2.map" -o ".\OutPutFiles\uCOS-II_demo2.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\OutPutFiles\uCOS-II_demo2.axf'
+### ADS-LD Command File: '.\OutPutFiles\uCOS-II_demo2.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\OutPutFiles\uCOS-II_demo2.lnp', Handle=0x00000428
+### Writing '.lnp' file
+### ADS-LD Command file '.\OutPutFiles\uCOS-II_demo2.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

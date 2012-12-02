@@ -1,0 +1,13 @@
+.\out-files\guival.o: GUI\core\GUIVal.c
+.\out-files\guival.o: GUI\core\GUI_Protected.h
+.\out-files\guival.o: GUI\core\GUI.h
+.\out-files\guival.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\guival.o: .\Config\GUIConf.h
+.\out-files\guival.o: GUI\core\GUIType.h
+.\out-files\guival.o: GUI\core\LCD.h
+.\out-files\guival.o: GUI\core\GUIVersion.h
+.\out-files\guival.o: GUI\core\LCD_Protected.h
+.\out-files\guival.o: GUI\core\GUIDebug.h
+.\out-files\guival.o: GUI\core\GUI_X.h
+.\out-files\guival.o: .\GUI\WM\WM_GUI.h
+.\out-files\guival.o: E:\Keil\ARM\RV31\INC\string.h

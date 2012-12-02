@@ -1,0 +1,16 @@
+.\out-files\guiaaarc.o: GUI\AntiAlias\GUIAAArc.c
+.\out-files\guiaaarc.o: E:\Keil\ARM\RV31\INC\stdio.h
+.\out-files\guiaaarc.o: E:\Keil\ARM\RV31\INC\stdlib.h
+.\out-files\guiaaarc.o: E:\Keil\ARM\RV31\INC\string.h
+.\out-files\guiaaarc.o: E:\Keil\ARM\RV31\INC\math.h
+.\out-files\guiaaarc.o: .\GUI\core\GUI_Protected.h
+.\out-files\guiaaarc.o: .\GUI\core\GUI.h
+.\out-files\guiaaarc.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guiaaarc.o: .\Config\GUIConf.h
+.\out-files\guiaaarc.o: .\GUI\core\GUIType.h
+.\out-files\guiaaarc.o: .\GUI\core\LCD.h
+.\out-files\guiaaarc.o: .\GUI\core\GUIVersion.h
+.\out-files\guiaaarc.o: .\GUI\core\LCD_Protected.h
+.\out-files\guiaaarc.o: .\GUI\core\GUIDebug.h
+.\out-files\guiaaarc.o: .\GUI\core\GUI_X.h
+.\out-files\guiaaarc.o: .\GUI\WM\WM_GUI.h

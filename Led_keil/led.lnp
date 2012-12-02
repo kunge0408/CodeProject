@@ -1,0 +1,4 @@
+--cpu ARM920T "led.o" "init.o" "lcd.o" "uart.o" "xyx_320_240.o" "bmp.o" --strict --scatter ".\led.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\led.map" -o "led.axf"

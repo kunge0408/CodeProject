@@ -1,0 +1,12 @@
+.\out-files\aa_hirespixels.o: GUIDemo\aa_hirespixels.c
+.\out-files\aa_hirespixels.o: .\GUI\core\GUI.h
+.\out-files\aa_hirespixels.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\aa_hirespixels.o: .\Config\GUIConf.h
+.\out-files\aa_hirespixels.o: .\GUI\core\GUIType.h
+.\out-files\aa_hirespixels.o: .\GUI\core\LCD.h
+.\out-files\aa_hirespixels.o: .\GUI\core\GUIVersion.h
+.\out-files\aa_hirespixels.o: .\GUI\WM\WM.h
+.\out-files\aa_hirespixels.o: .\GUI\WM\WM_GUI.h
+.\out-files\aa_hirespixels.o: GUIDemo\GUIDEMO.h
+.\out-files\aa_hirespixels.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\aa_hirespixels.o: .\Config\LCDConf.h

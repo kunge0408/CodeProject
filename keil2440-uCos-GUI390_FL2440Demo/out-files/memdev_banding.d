@@ -1,0 +1,10 @@
+.\out-files\memdev_banding.o: GUIDemo\memdev_banding.c
+.\out-files\memdev_banding.o: .\GUI\core\GUI.h
+.\out-files\memdev_banding.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\memdev_banding.o: .\Config\GUIConf.h
+.\out-files\memdev_banding.o: .\GUI\core\GUIType.h
+.\out-files\memdev_banding.o: .\GUI\core\LCD.h
+.\out-files\memdev_banding.o: .\GUI\core\GUIVersion.h
+.\out-files\memdev_banding.o: GUIDemo\GUIDEMO.h
+.\out-files\memdev_banding.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\memdev_banding.o: .\Config\LCDConf.h

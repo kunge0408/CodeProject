@@ -1,0 +1,10 @@
+.\out-files\guidemo_bitmap4bpp.o: GUIDemo\GUIDEMO_Bitmap4bpp.c
+.\out-files\guidemo_bitmap4bpp.o: .\GUI\core\GUI.h
+.\out-files\guidemo_bitmap4bpp.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guidemo_bitmap4bpp.o: .\Config\GUIConf.h
+.\out-files\guidemo_bitmap4bpp.o: .\GUI\core\GUIType.h
+.\out-files\guidemo_bitmap4bpp.o: .\GUI\core\LCD.h
+.\out-files\guidemo_bitmap4bpp.o: .\GUI\core\GUIVersion.h
+.\out-files\guidemo_bitmap4bpp.o: GUIDemo\GUIDEMO.h
+.\out-files\guidemo_bitmap4bpp.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\guidemo_bitmap4bpp.o: .\Config\LCDConf.h

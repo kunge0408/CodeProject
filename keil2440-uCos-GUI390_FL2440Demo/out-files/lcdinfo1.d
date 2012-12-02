@@ -1,0 +1,12 @@
+.\out-files\lcdinfo1.o: GUI\core\LCDInfo1.c
+.\out-files\lcdinfo1.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\lcdinfo1.o: GUI\core\LCD.h
+.\out-files\lcdinfo1.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\lcdinfo1.o: .\Config\GUIConf.h
+.\out-files\lcdinfo1.o: GUI\core\LCD_Private.h
+.\out-files\lcdinfo1.o: GUI\core\LCD_ConfDefaults.h
+.\out-files\lcdinfo1.o: .\Config\LCDConf.h
+.\out-files\lcdinfo1.o: GUI\core\LCD_Protected.h
+.\out-files\lcdinfo1.o: GUI\core\GUI.h
+.\out-files\lcdinfo1.o: GUI\core\GUIType.h
+.\out-files\lcdinfo1.o: GUI\core\GUIVersion.h

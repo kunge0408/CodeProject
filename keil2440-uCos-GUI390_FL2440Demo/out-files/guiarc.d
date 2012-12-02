@@ -1,0 +1,14 @@
+.\out-files\guiarc.o: GUI\core\GUIArc.c
+.\out-files\guiarc.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\guiarc.o: E:\Keil\ARM\RV31\INC\math.h
+.\out-files\guiarc.o: GUI\core\GUI_Protected.h
+.\out-files\guiarc.o: GUI\core\GUI.h
+.\out-files\guiarc.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\guiarc.o: .\Config\GUIConf.h
+.\out-files\guiarc.o: GUI\core\GUIType.h
+.\out-files\guiarc.o: GUI\core\LCD.h
+.\out-files\guiarc.o: GUI\core\GUIVersion.h
+.\out-files\guiarc.o: GUI\core\LCD_Protected.h
+.\out-files\guiarc.o: GUI\core\GUIDebug.h
+.\out-files\guiarc.o: GUI\core\GUI_X.h
+.\out-files\guiarc.o: .\GUI\WM\WM_GUI.h

@@ -1,0 +1,9 @@
+.\out-files\guiaapolyout.o: GUI\AntiAlias\GUIAAPolyOut.c
+.\out-files\guiaapolyout.o: E:\Keil\ARM\RV31\INC\stdio.h
+.\out-files\guiaapolyout.o: E:\Keil\ARM\RV31\INC\string.h
+.\out-files\guiaapolyout.o: .\GUI\core\GUI.h
+.\out-files\guiaapolyout.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guiaapolyout.o: .\Config\GUIConf.h
+.\out-files\guiaapolyout.o: .\GUI\core\GUIType.h
+.\out-files\guiaapolyout.o: .\GUI\core\LCD.h
+.\out-files\guiaapolyout.o: .\GUI\core\GUIVersion.h

@@ -1,0 +1,17 @@
+.\out-files\guicurs.o: GUI\core\GUICurs.c
+.\out-files\guicurs.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\guicurs.o: GUI\core\GUI_Private.h
+.\out-files\guicurs.o: GUI\core\GUI_Protected.h
+.\out-files\guicurs.o: GUI\core\GUI.h
+.\out-files\guicurs.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\guicurs.o: .\Config\GUIConf.h
+.\out-files\guicurs.o: GUI\core\GUIType.h
+.\out-files\guicurs.o: GUI\core\LCD.h
+.\out-files\guicurs.o: GUI\core\GUIVersion.h
+.\out-files\guicurs.o: GUI\core\LCD_Protected.h
+.\out-files\guicurs.o: GUI\core\GUIDebug.h
+.\out-files\guicurs.o: GUI\core\GUI_X.h
+.\out-files\guicurs.o: .\GUI\WM\WM_GUI.h
+.\out-files\guicurs.o: GUI\core\LCD_Private.h
+.\out-files\guicurs.o: GUI\core\LCD_ConfDefaults.h
+.\out-files\guicurs.o: .\Config\LCDConf.h

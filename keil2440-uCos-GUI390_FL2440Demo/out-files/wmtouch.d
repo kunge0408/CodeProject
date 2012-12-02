@@ -1,0 +1,15 @@
+.\out-files\wmtouch.o: GUI\WM\WMTouch.c
+.\out-files\wmtouch.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\wmtouch.o: GUI\WM\WM_Intern.h
+.\out-files\wmtouch.o: GUI\WM\WM.h
+.\out-files\wmtouch.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\wmtouch.o: .\Config\GUIConf.h
+.\out-files\wmtouch.o: .\GUI\core\GUIType.h
+.\out-files\wmtouch.o: .\GUI\core\LCD.h
+.\out-files\wmtouch.o: GUI\WM\WM_GUI.h
+.\out-files\wmtouch.o: .\GUI\core\GUI_Protected.h
+.\out-files\wmtouch.o: .\GUI\core\GUI.h
+.\out-files\wmtouch.o: .\GUI\core\GUIVersion.h
+.\out-files\wmtouch.o: .\GUI\core\LCD_Protected.h
+.\out-files\wmtouch.o: .\GUI\core\GUIDebug.h
+.\out-files\wmtouch.o: .\GUI\core\GUI_X.h

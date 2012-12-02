@@ -1,0 +1,102 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |subr|, CODE, READONLY
+    2 00000000         
+    3 00000000                 EXPORT           randxxx
+    4 00000000         randxxx
+    5 00000000         ; on exit:
+    6 00000000         ; a1 = low 32-bits of pseudo-random number
+    7 00000000         ;   a2 = high bit (if you want to know it)
+    8 00000000 E59FC020        LDR              ip, |seedpointer|
+    9 00000004 E89C0003        LDMIA            ip, {a1, a2}
+   10 00000008 E11100A1        TST              a2, a2, LSR#1 
+                                                            ; to bit into carry
+                                                            
+   11 0000000C E1B02060        MOVS             a3, a1, RRX ; 33-bit rotate rig
+                                                            ht
+   12 00000010 E0A11001        ADC              a2, a2, a2  ; carry into LSB of
+                                                             a2
+   13 00000014 E0A11001        ADC              a2, a2, a2  ; carry into LSB of
+                                                             a2
+   14 00000018 E0222600        EOR              a3, a3, a1, LSL#12 
+                                                            ; (involved!)
+   15 0000001C E0220A22        EOR              a1, a3, a3, LSR#20 ; (similarly
+                                                             involved!)
+   16 00000020 E88C0003        STMIA            ip, {a1, a2}
+   17 00000024         
+   18 00000024 E1A0F00E        MOV              pc, lr
+   19 00000028         
+   20 00000028         |seedpointer|
+   21 00000028 00000000        DCD              seed
+   22 0000002C         
+   23 0000002C                 AREA             |Random$$data|, DATA
+   24 00000000         
+   25 00000000                 EXPORT           seed
+   26 00000000         seed
+   27 00000000 55555555        DCD              &55555555
+   28 00000004 55555555        DCD              &55555555
+   29 00000008         
+   30 00000008                 END
+Command Line: --debug --xref --cpu=ARM920T --depend=.\out-files\rand.d -o.\out-
+files\rand.o -IE:\Keil\ARM\CMSIS\Include -IE:\Keil\ARM\INC\Samsung --list=.\lis
+t-files\rand.lst S3C2440\source\rand.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+randxxx 00000000
+
+Symbol: randxxx
+   Definitions
+      At line 4 in file S3C2440\source\rand.s
+   Uses
+      At line 3 in file S3C2440\source\rand.s
+Comment: randxxx used once
+seedpointer 00000028
+
+Symbol: seedpointer
+   Definitions
+      At line 20 in file S3C2440\source\rand.s
+   Uses
+      At line 8 in file S3C2440\source\rand.s
+Comment: seedpointer used once
+subr 00000000
+
+Symbol: subr
+   Definitions
+      At line 1 in file S3C2440\source\rand.s
+   Uses
+      None
+Comment: subr unused
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Random$$data 00000000
+
+Symbol: Random$$data
+   Definitions
+      At line 23 in file S3C2440\source\rand.s
+   Uses
+      None
+Comment: Random$$data unused
+seed 00000000
+
+Symbol: seed
+   Definitions
+      At line 26 in file S3C2440\source\rand.s
+   Uses
+      At line 21 in file S3C2440\source\rand.s
+      At line 25 in file S3C2440\source\rand.s
+
+2 symbols
+328 symbols in table

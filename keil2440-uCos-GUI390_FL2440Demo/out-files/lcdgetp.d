@@ -1,0 +1,17 @@
+.\out-files\lcdgetp.o: GUI\core\LCDGetP.c
+.\out-files\lcdgetp.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\lcdgetp.o: GUI\core\GUI_Private.h
+.\out-files\lcdgetp.o: GUI\core\GUI_Protected.h
+.\out-files\lcdgetp.o: GUI\core\GUI.h
+.\out-files\lcdgetp.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\lcdgetp.o: .\Config\GUIConf.h
+.\out-files\lcdgetp.o: GUI\core\GUIType.h
+.\out-files\lcdgetp.o: GUI\core\LCD.h
+.\out-files\lcdgetp.o: GUI\core\GUIVersion.h
+.\out-files\lcdgetp.o: GUI\core\LCD_Protected.h
+.\out-files\lcdgetp.o: GUI\core\GUIDebug.h
+.\out-files\lcdgetp.o: GUI\core\GUI_X.h
+.\out-files\lcdgetp.o: .\GUI\WM\WM_GUI.h
+.\out-files\lcdgetp.o: GUI\core\LCD_Private.h
+.\out-files\lcdgetp.o: GUI\core\LCD_ConfDefaults.h
+.\out-files\lcdgetp.o: .\Config\LCDConf.h

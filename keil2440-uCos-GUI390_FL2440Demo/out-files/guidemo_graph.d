@@ -1,0 +1,12 @@
+.\out-files\guidemo_graph.o: GUIDemo\GUIDEMO_Graph.c
+.\out-files\guidemo_graph.o: .\GUI\core\GUI.h
+.\out-files\guidemo_graph.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guidemo_graph.o: .\Config\GUIConf.h
+.\out-files\guidemo_graph.o: .\GUI\core\GUIType.h
+.\out-files\guidemo_graph.o: .\GUI\core\LCD.h
+.\out-files\guidemo_graph.o: .\GUI\core\GUIVersion.h
+.\out-files\guidemo_graph.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\guidemo_graph.o: .\Config\LCDConf.h
+.\out-files\guidemo_graph.o: E:\Keil\ARM\RV31\INC\math.h
+.\out-files\guidemo_graph.o: E:\Keil\ARM\RV31\INC\stdlib.h
+.\out-files\guidemo_graph.o: GUIDemo\GUIDEMO.h

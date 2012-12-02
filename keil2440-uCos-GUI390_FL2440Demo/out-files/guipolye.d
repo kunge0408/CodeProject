@@ -1,0 +1,10 @@
+.\out-files\guipolye.o: GUI\core\GUIPolyE.c
+.\out-files\guipolye.o: E:\Keil\ARM\RV31\INC\math.h
+.\out-files\guipolye.o: GUI\core\GUI.h
+.\out-files\guipolye.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\guipolye.o: .\Config\GUIConf.h
+.\out-files\guipolye.o: GUI\core\GUIType.h
+.\out-files\guipolye.o: GUI\core\LCD.h
+.\out-files\guipolye.o: GUI\core\GUIVersion.h
+.\out-files\guipolye.o: GUI\core\GUIDebug.h
+.\out-files\guipolye.o: GUI\core\GUI_X.h

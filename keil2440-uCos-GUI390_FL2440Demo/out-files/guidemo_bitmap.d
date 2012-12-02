@@ -1,0 +1,13 @@
+.\out-files\guidemo_bitmap.o: GUIDemo\GUIDEMO_Bitmap.c
+.\out-files\guidemo_bitmap.o: .\GUI\core\GUI.h
+.\out-files\guidemo_bitmap.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guidemo_bitmap.o: .\Config\GUIConf.h
+.\out-files\guidemo_bitmap.o: .\GUI\core\GUIType.h
+.\out-files\guidemo_bitmap.o: .\GUI\core\LCD.h
+.\out-files\guidemo_bitmap.o: .\GUI\core\GUIVersion.h
+.\out-files\guidemo_bitmap.o: GUIDemo\GUIDEMO.h
+.\out-files\guidemo_bitmap.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\guidemo_bitmap.o: .\Config\LCDConf.h
+.\out-files\guidemo_bitmap.o: E:\Keil\ARM\RV31\INC\math.h
+.\out-files\guidemo_bitmap.o: .\GUI\WM\WM.h
+.\out-files\guidemo_bitmap.o: .\GUI\WM\WM_GUI.h

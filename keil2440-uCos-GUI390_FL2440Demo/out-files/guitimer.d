@@ -1,0 +1,13 @@
+.\out-files\guitimer.o: GUI\core\GUITimer.c
+.\out-files\guitimer.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\guitimer.o: GUI\core\GUI_Protected.h
+.\out-files\guitimer.o: GUI\core\GUI.h
+.\out-files\guitimer.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\guitimer.o: .\Config\GUIConf.h
+.\out-files\guitimer.o: GUI\core\GUIType.h
+.\out-files\guitimer.o: GUI\core\LCD.h
+.\out-files\guitimer.o: GUI\core\GUIVersion.h
+.\out-files\guitimer.o: GUI\core\LCD_Protected.h
+.\out-files\guitimer.o: GUI\core\GUIDebug.h
+.\out-files\guitimer.o: GUI\core\GUI_X.h
+.\out-files\guitimer.o: .\GUI\WM\WM_GUI.h

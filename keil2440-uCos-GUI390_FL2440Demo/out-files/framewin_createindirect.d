@@ -1,0 +1,9 @@
+.\out-files\framewin_createindirect.o: GUI\Widget\FRAMEWIN_CreateIndirect.c
+.\out-files\framewin_createindirect.o: GUI\Widget\FRAMEWIN.h
+.\out-files\framewin_createindirect.o: .\GUI\WM\WM.h
+.\out-files\framewin_createindirect.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\framewin_createindirect.o: .\Config\GUIConf.h
+.\out-files\framewin_createindirect.o: .\GUI\core\GUIType.h
+.\out-files\framewin_createindirect.o: .\GUI\core\LCD.h
+.\out-files\framewin_createindirect.o: .\GUI\WM\WM_GUI.h
+.\out-files\framewin_createindirect.o: GUI\Widget\DIALOG_Intern.h

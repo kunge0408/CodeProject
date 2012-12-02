@@ -1,0 +1,15 @@
+.\out-files\lcd_getcolorindex.o: GUI\core\LCD_GetColorIndex.c
+.\out-files\lcd_getcolorindex.o: GUI\core\LCD_Private.h
+.\out-files\lcd_getcolorindex.o: GUI\core\LCD_ConfDefaults.h
+.\out-files\lcd_getcolorindex.o: .\Config\LCDConf.h
+.\out-files\lcd_getcolorindex.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\lcd_getcolorindex.o: .\Config\GUIConf.h
+.\out-files\lcd_getcolorindex.o: GUI\core\LCD_Protected.h
+.\out-files\lcd_getcolorindex.o: GUI\core\LCD.h
+.\out-files\lcd_getcolorindex.o: GUI\core\GUI.h
+.\out-files\lcd_getcolorindex.o: GUI\core\GUIType.h
+.\out-files\lcd_getcolorindex.o: GUI\core\GUIVersion.h
+.\out-files\lcd_getcolorindex.o: GUI\core\GUI_Protected.h
+.\out-files\lcd_getcolorindex.o: GUI\core\GUIDebug.h
+.\out-files\lcd_getcolorindex.o: GUI\core\GUI_X.h
+.\out-files\lcd_getcolorindex.o: .\GUI\WM\WM_GUI.h

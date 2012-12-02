@@ -1,0 +1,17 @@
+.\out-files\lcdl0delta.o: GUI\core\LCDL0Delta.c
+.\out-files\lcdl0delta.o: E:\Keil\ARM\RV31\INC\stddef.h
+.\out-files\lcdl0delta.o: GUI\core\GUI_Private.h
+.\out-files\lcdl0delta.o: GUI\core\GUI_Protected.h
+.\out-files\lcdl0delta.o: GUI\core\GUI.h
+.\out-files\lcdl0delta.o: GUI\core\GUI_ConfDefaults.h
+.\out-files\lcdl0delta.o: .\Config\GUIConf.h
+.\out-files\lcdl0delta.o: GUI\core\GUIType.h
+.\out-files\lcdl0delta.o: GUI\core\LCD.h
+.\out-files\lcdl0delta.o: GUI\core\GUIVersion.h
+.\out-files\lcdl0delta.o: GUI\core\LCD_Protected.h
+.\out-files\lcdl0delta.o: GUI\core\GUIDebug.h
+.\out-files\lcdl0delta.o: GUI\core\GUI_X.h
+.\out-files\lcdl0delta.o: .\GUI\WM\WM_GUI.h
+.\out-files\lcdl0delta.o: GUI\core\LCD_Private.h
+.\out-files\lcdl0delta.o: GUI\core\LCD_ConfDefaults.h
+.\out-files\lcdl0delta.o: .\Config\LCDConf.h

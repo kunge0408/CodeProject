@@ -1,0 +1,15 @@
+.\out-files\lcd_ltv350qv_f05.o: LCD\LCD_LTV350QV_F05.c
+.\out-files\lcd_ltv350qv_f05.o: E:\Keil\ARM\RV31\INC\stdarg.h
+.\out-files\lcd_ltv350qv_f05.o: E:\Keil\ARM\RV31\INC\string.h
+.\out-files\lcd_ltv350qv_f05.o: E:\Keil\ARM\RV31\INC\stdlib.h
+.\out-files\lcd_ltv350qv_f05.o: E:\Keil\ARM\RV31\INC\stdio.h
+.\out-files\lcd_ltv350qv_f05.o: E:\Keil\ARM\RV31\INC\ctype.h
+.\out-files\lcd_ltv350qv_f05.o: E:\Keil\ARM\RV31\INC\math.h
+.\out-files\lcd_ltv350qv_f05.o: .\S3C2440\includes\def1.h
+.\out-files\lcd_ltv350qv_f05.o: .\S3C2440\includes\option.h
+.\out-files\lcd_ltv350qv_f05.o: .\S3C2440\includes\2440addr.h
+.\out-files\lcd_ltv350qv_f05.o: .\S3C2440\includes\2440lib.h
+.\out-files\lcd_ltv350qv_f05.o: .\S3C2440\includes\2440slib.h
+.\out-files\lcd_ltv350qv_f05.o: LCD\LCD_LTV350QV_F05.h
+.\out-files\lcd_ltv350qv_f05.o: .\uCOS_II\arm\os_cpu.h
+.\out-files\lcd_ltv350qv_f05.o: LCD\draw.h

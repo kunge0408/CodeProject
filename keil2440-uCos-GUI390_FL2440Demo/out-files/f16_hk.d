@@ -1,0 +1,9 @@
+.\out-files\f16_hk.o: GUI\Font\F16_HK.c
+.\out-files\f16_hk.o: E:\Keil\ARM\RV31\INC\stdio.h
+.\out-files\f16_hk.o: .\GUI\core\GUI_FontIntern.h
+.\out-files\f16_hk.o: .\GUI\core\GUI.h
+.\out-files\f16_hk.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\f16_hk.o: .\Config\GUIConf.h
+.\out-files\f16_hk.o: .\GUI\core\GUIType.h
+.\out-files\f16_hk.o: .\GUI\core\LCD.h
+.\out-files\f16_hk.o: .\GUI\core\GUIVersion.h

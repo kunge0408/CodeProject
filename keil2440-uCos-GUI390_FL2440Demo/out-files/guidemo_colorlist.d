@@ -1,0 +1,10 @@
+.\out-files\guidemo_colorlist.o: GUIDemo\GUIDEMO_ColorList.c
+.\out-files\guidemo_colorlist.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\guidemo_colorlist.o: .\Config\LCDConf.h
+.\out-files\guidemo_colorlist.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guidemo_colorlist.o: .\Config\GUIConf.h
+.\out-files\guidemo_colorlist.o: .\GUI\core\GUI.h
+.\out-files\guidemo_colorlist.o: .\GUI\core\GUIType.h
+.\out-files\guidemo_colorlist.o: .\GUI\core\LCD.h
+.\out-files\guidemo_colorlist.o: .\GUI\core\GUIVersion.h
+.\out-files\guidemo_colorlist.o: GUIDemo\GUIDEMO.h

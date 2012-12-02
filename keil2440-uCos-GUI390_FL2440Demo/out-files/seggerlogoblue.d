@@ -1,0 +1,11 @@
+.\out-files\seggerlogoblue.o: GUIDemo\SeggerLogoBlue.c
+.\out-files\seggerlogoblue.o: E:\Keil\ARM\RV31\INC\stdlib.h
+.\out-files\seggerlogoblue.o: .\GUI\core\GUI.h
+.\out-files\seggerlogoblue.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\seggerlogoblue.o: .\Config\GUIConf.h
+.\out-files\seggerlogoblue.o: .\GUI\core\GUIType.h
+.\out-files\seggerlogoblue.o: .\GUI\core\LCD.h
+.\out-files\seggerlogoblue.o: .\GUI\core\GUIVersion.h
+.\out-files\seggerlogoblue.o: GUIDemo\GUIDEMO.h
+.\out-files\seggerlogoblue.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\seggerlogoblue.o: .\Config\LCDConf.h

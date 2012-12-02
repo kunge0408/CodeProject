@@ -1,0 +1,10 @@
+.\OutPutFiles\os_timer4_c.o: CommonFiles\uCOS-II\uCOS-II_BSP\os_timer4_c.c
+.\OutPutFiles\os_timer4_c.o: .\App_Main\App_INC\includes.h
+.\OutPutFiles\os_timer4_c.o: .\CommonFiles\uCOS-II\uCOS-II_BSP\os_cpu.h
+.\OutPutFiles\os_timer4_c.o: .\CommonFiles\uCOS-II\uCOS-II_BSP\os_cfg.h
+.\OutPutFiles\os_timer4_c.o: .\CommonFiles\uCOS-II\uCoS-II_SRC\ucos_ii.h
+.\OutPutFiles\os_timer4_c.o: .\App_Main\App_INC\app_cfg.h
+.\OutPutFiles\os_timer4_c.o: .\CommonFiles\FL2440_BSP\2440BSP_INC\2440addr.h
+.\OutPutFiles\os_timer4_c.o: .\CommonFiles\FL2440_BSP\2440BSP_INC\option.h
+.\OutPutFiles\os_timer4_c.o: .\CommonFiles\FL2440_BSP\2440BSP_INC\def.h
+.\OutPutFiles\os_timer4_c.o: .\CommonFiles\uCOS-II\uCOS-II_BSP\os_timer4_c.h

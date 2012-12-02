@@ -1,0 +1,13 @@
+.\out-files\guidemo_memdevb.o: GUIDemo\GUIDEMO_MemDevB.c
+.\out-files\guidemo_memdevb.o: .\GUI\core\GUI.h
+.\out-files\guidemo_memdevb.o: .\GUI\core\GUI_ConfDefaults.h
+.\out-files\guidemo_memdevb.o: .\Config\GUIConf.h
+.\out-files\guidemo_memdevb.o: .\GUI\core\GUIType.h
+.\out-files\guidemo_memdevb.o: .\GUI\core\LCD.h
+.\out-files\guidemo_memdevb.o: .\GUI\core\GUIVersion.h
+.\out-files\guidemo_memdevb.o: GUIDemo\GUIDEMO.h
+.\out-files\guidemo_memdevb.o: .\GUI\core\LCD_ConfDefaults.h
+.\out-files\guidemo_memdevb.o: .\Config\LCDConf.h
+.\out-files\guidemo_memdevb.o: .\GUI\WM\WM.h
+.\out-files\guidemo_memdevb.o: .\GUI\WM\WM_GUI.h
+.\out-files\guidemo_memdevb.o: E:\Keil\ARM\RV31\INC\stdio.h
